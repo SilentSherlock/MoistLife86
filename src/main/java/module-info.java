@@ -1,4 +1,4 @@
-module com.silent.moistlife86 {
+module com.silent.moistlife {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -8,7 +8,7 @@ module com.silent.moistlife86 {
 //    requires validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
+//    requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
     opens com.silent.moistlife86 to javafx.fxml;
