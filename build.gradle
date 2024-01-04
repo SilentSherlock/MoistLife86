@@ -46,10 +46,19 @@ dependencies {
     implementation('eu.hansolo:tilesfx:17.1.9') {
         exclude(group: 'org.openjfx')
     }
+    implementation 'org.jetbrains:annotations:24.0.1'
+
     implementation('com.github.almasb:fxgl:17.1') {
         exclude(group: 'org.openjfx')
     }
+// import the BOM
+    implementation platform('it.tdlight:tdlight-java-bom:3.2.2+td.1.8.21')
 
+    // do not specify the versions on the dependencies below!
+    implementation group: 'it.tdlight', name: 'tdlight-java' // Java 8 is supported if you use the following dependency classifier: `jdk8`
+    implementation group: 'it.tdlight', name: 'tdlight-natives', classifier: 'windows_amd64'
+    implementation 'org.telegram:telegrambots:6.8.0'
+    implementation 'org.telegram:telegrambots-abilities:6.8.0'
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
